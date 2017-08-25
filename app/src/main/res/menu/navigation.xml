@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_getcashe"
+        android:icon="@drawable/ic_getcashe"
+        android:title="@string/title_getcashe" />
+
+    <item
+        android:id="@+id/navigation_mycashe"
+        android:icon="@drawable/ic_mycashe"
+        android:title="@string/title_mycashe" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/tittle_profile" />
+
+    <item
+        android:id="@+id/navigation_more"
+        android:icon="@drawable/ic_more"
+        android:title="@string/title_more" />
+
+</menu>

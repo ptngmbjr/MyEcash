@@ -5,4 +5,10 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+    <string name="title_getcashe">Get CASHe</string>
+    <string name="title_mycashe">My CASHe</string>
+    <string name="tittle_profile">Profile</string>
+    <string name="title_more">More</string>
+
 </resources>
