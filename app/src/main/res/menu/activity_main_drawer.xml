@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_getcashe"
+            android:icon="@drawable/ic_menu_getcashe"
+            android:title="GET CASHe" />
+        <item
+            android:id="@+id/nav_mycashe"
+            android:icon="@drawable/ic_menu_mycashe"
+            android:title="MY CASHe" />
+        <item
+            android:id="@+id/nav_myprofile"
+            android:icon="@drawable/ic_menu_profile"
+            android:title="MY PROFILE" />
+        <item
+            android:id="@+id/nav_referandearn"
+            android:icon="@drawable/ic_menu_referandearn"
+            android:title="REFER &amp; EARN" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_menu_about"
+            android:title="ABOUT" />
+        <item
+            android:id="@+id/nav_helpdesk"
+            android:icon="@drawable/ic_menu_helpdesk"
+            android:title="HELP DESK" />
+        <item
+            android:id="@+id/nav_howtorepay"
+            android:icon="@drawable/ic_menu_howtorepay"
+            android:title="HOW TO REPAY" />
+    </group>
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_menu_logout"
+            android:title="LOGOUT" />
+</menu>
