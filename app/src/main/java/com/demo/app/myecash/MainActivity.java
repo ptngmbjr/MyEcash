@@ -17,6 +17,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
 import com.crashlytics.android.Crashlytics;
 
 import java.lang.reflect.Field;
@@ -74,9 +75,7 @@ public class MainActivity extends AppCompatActivity
 //        toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-
-//        navigationView.setNavigationItemSelectedListener(this);
-
+        navigationView.setNavigationItemSelectedListener(this);
 
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
@@ -108,12 +107,12 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-//        if (drawer.isDrawerOpen(GravityCompat.START)) {
-//            drawer.closeDrawer(GravityCompat.START);
-//        } else {
-//            super.onBackPressed();
-//        }
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
     }
 
 //    @Override
@@ -156,15 +155,14 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_helpdesk) {
 
-        }
-        else if (id == R.id.nav_howtorepay) {
+        } else if (id == R.id.nav_howtorepay) {
 
         } else if (id == R.id.nav_logout) {
 
         }
 
-//            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-//        drawer.closeDrawer(GravityCompat.START);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 }
