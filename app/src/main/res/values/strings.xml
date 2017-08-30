@@ -10,5 +10,6 @@
     <string name="title_mycashe">My CASHe</string>
     <string name="tittle_profile">Profile</string>
     <string name="title_more">More</string>
+    <string name="title_activity_get_cashe">GetCasheActivity</string>
 
 </resources>

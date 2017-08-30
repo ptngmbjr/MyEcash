@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_horizontal_margin"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimary"
+        android:layout_weight="0.3">
+
+        <TextView
+            android:id="@+id/titleTV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="0.7"
+            android:gravity="center_vertical"
+            android:text="CASHe 15"
+            android:textSize="@dimen/headertitlesize"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:text="APPLY NOW"
+            android:textSize="@dimen/headerbuttonsize" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/durationTV"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:layout_width="match_parent"
+            android:gravity="bottom|center_horizontal"
+            android:text="15 DAYS"
+            android:textSize="@dimen/listvwdatasize"
+            android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/durationDummy"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:layout_width="match_parent"
+                android:gravity="top|center_horizontal"
+                android:text="Duration"
+                android:textSize="@dimen/listvwdatasmallsize"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/amountTV"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:layout_width="match_parent"
+                android:gravity="bottom|center_horizontal"
+                android:text="$ 50,000"
+                android:textSize="@dimen/listvwdatasize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/amountDummy"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:layout_width="match_parent"
+                android:gravity="top|center_horizontal"
+                android:text="Max Amount"
+                android:textSize="@dimen/listvwdatasmallsize"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/interestTV"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:layout_width="match_parent"
+                android:gravity="bottom|center_horizontal"
+                android:text="1.5%"
+                android:textSize="@dimen/listvwdatasize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/interestDummy"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:layout_width="match_parent"
+                android:gravity="top|center_horizontal"
+                android:text="Interest"
+                android:textSize="@dimen/listvwdatasmallsize"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:background="@drawable/seperator"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/tandcTV"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="Applicable processing fee and interest rate changes will be deducted at source "
+            android:textSize="@dimen/listvwdatamicrosize"
+            android:textStyle="normal" />
+
+</LinearLayout>

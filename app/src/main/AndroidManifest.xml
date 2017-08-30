@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.demo.app.myecash">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,10 +21,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="73ab6bf0bc0b3760a1fd1ac9ff9fc4ba35c3106a" />
+
+        <activity
+            android:name=".GetCasheActivity"
+            android:label="@string/title_activity_get_cashe"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
-    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
