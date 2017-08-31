@@ -26,10 +26,7 @@
             android:name="io.fabric.ApiKey"
             android:value="73ab6bf0bc0b3760a1fd1ac9ff9fc4ba35c3106a" />
 
-        <activity
-            android:name=".GetCasheActivity"
-            android:label="@string/title_activity_get_cashe"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".getCasheActivity"></activity>
     </application>
 
 </manifest>

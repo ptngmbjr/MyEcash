@@ -1,5 +1,6 @@
 package com.demo.app.myecash;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.internal.BottomNavigationItemView;
@@ -35,7 +36,8 @@ public class MainActivity extends AppCompatActivity
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_getcashe:
-//                    mTextMessage.setText(R.string.title_home);
+                    Intent intent = new Intent(getApplicationContext(), getCasheActivity.class);
+                    startActivity(intent);
                     return true;
                 case R.id.navigation_mycashe:
 //                    mTextMessage.setText(R.string.title_dashboard);
