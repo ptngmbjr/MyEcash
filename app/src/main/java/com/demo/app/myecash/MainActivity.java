@@ -34,20 +34,23 @@ public class MainActivity extends AppCompatActivity
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            Intent intent=null;
             switch (item.getItemId()) {
                 case R.id.navigation_getcashe:
-                    Intent intent = new Intent(getApplicationContext(), getCasheActivity.class);
-                    startActivity(intent);
-                    return true;
+                    intent = new Intent(getApplicationContext(), getCasheActivity.class);
                 case R.id.navigation_mycashe:
-//                    mTextMessage.setText(R.string.title_dashboard);
-                    return true;
+                    intent = new Intent(getApplicationContext(), myCashe.class);
                 case R.id.navigation_profile:
-//                    mTextMessage.setText(R.string.title_notifications);
-                    return true;
+                    intent = new Intent(getApplicationContext(), profile.class);
                 case R.id.navigation_more:
                     return true;
             }
+
+            if(intent!=null) {
+                startActivity(intent);
+                return true;
+            }
+
             return false;
         }
 

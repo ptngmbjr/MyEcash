@@ -26,7 +26,9 @@
             android:name="io.fabric.ApiKey"
             android:value="73ab6bf0bc0b3760a1fd1ac9ff9fc4ba35c3106a" />
 
-        <activity android:name=".getCasheActivity"></activity>
+        <activity android:name=".getCasheActivity" />
+        <activity android:name=".myCashe" />
+        <activity android:name=".profile"></activity>
     </application>
 
 </manifest>
