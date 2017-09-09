@@ -1,30 +1,29 @@
 package com.demo.app.myecash;
 
-import android.app.Activity;
 import android.content.res.Resources;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.demo.app.myecash.ListViews.getCasheLV;
-import com.demo.app.myecash.Adaptors.getCasheAdaptor;
+import com.demo.app.myecash.Adaptors.profileAdaptor;
+import com.demo.app.myecash.ListViews.profileListView;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class getCasheActivity extends Activity {
+public class ProfileActivity extends AppCompatActivity {
 
     ListView list;
-    getCasheAdaptor adapter;
-    public getCasheActivity CustomListView = null;
-    public ArrayList<getCasheLV> CustomListViewValuesArr = new ArrayList<getCasheLV>();
+    profileAdaptor adapter;
+    public ProfileActivity CustomListView = null;
+    public ArrayList<profileListView> CustomListViewValuesArr = new ArrayList<profileListView>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_get_cashe);
+        setContentView(R.layout.activity_profile);
 
         CustomListView = this;
 
@@ -32,10 +31,10 @@ public class getCasheActivity extends Activity {
         setListData();
 
         Resources res = getResources();
-        list = (ListView) findViewById(R.id.list);  // List defined in XML ( See Below )
+        list = (ListView) findViewById(R.id.list_profile);  // List defined in XML ( See Below )
 
         /**************** Create Custom Adapter *********/
-        adapter = new getCasheAdaptor(CustomListView, CustomListViewValuesArr, res);
+        adapter = new profileAdaptor(CustomListView, CustomListViewValuesArr, res);
         list.setAdapter(adapter);
 
     }
@@ -45,15 +44,14 @@ public class getCasheActivity extends Activity {
 
         for (int i = 0; i < 11; i++) {
 
-            final getCasheLV sched = new getCasheLV();
+            final profileListView sched = new profileListView();
 
             /******* Firstly take data in model object ******/
 
-            sched.setTitle("CASHe " + i * 10);
-            sched.setAmount((i * 10000) + "");
-            sched.setamtDuration((i * 10) + "");
-            sched.setInterest((i * 150 / 100) + "");
-            sched.setTandc("This is all sample data for " + i * 10);
+            sched.setProfile_image("ic_profile.png");
+            sched.setProfile_title("PERSONAL DETAILS");
+            sched.setProfile_completeness("50% COMPLETE");
+
             /******** Take Model Object in ArrayList **********/
             CustomListViewValuesArr.add(sched);
         }
@@ -63,13 +61,10 @@ public class getCasheActivity extends Activity {
 
     /*****************  This function used by adapter ****************/
     public void onItemClick(int mPosition) {
-        getCasheLV tempValues = (getCasheLV) CustomListViewValuesArr.get(mPosition);
-
-
-        // SHOW ALERT
+        profileListView tempValues = (profileListView) CustomListViewValuesArr.get(mPosition);
 
         Toast.makeText(CustomListView,
-                "" + tempValues.getTitle(), Toast.LENGTH_LONG)
+                "" + tempValues.getProfile_title(), Toast.LENGTH_LONG)
                 .show();
     }
 }

@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.demo.app.myecash.ListViews.getCasheLV;
+import com.demo.app.myecash.ListViews.getCasheListView;
 import com.demo.app.myecash.R;
 
 import java.util.ArrayList;
@@ -28,7 +28,7 @@ public class getCasheAdaptor extends BaseAdapter implements View.OnClickListener
     private ArrayList data;
     private static LayoutInflater inflater = null;
     public Resources res;
-    getCasheLV tempValues = null;
+    getCasheListView tempValues = null;
     int i = 0;
 
     /*************  CustomAdapter Constructor *****************/
@@ -104,7 +104,7 @@ public class getCasheAdaptor extends BaseAdapter implements View.OnClickListener
         } else {
             /***** Get each Model object from Arraylist ********/
             tempValues = null;
-            tempValues = (getCasheLV) data.get(position);
+            tempValues = (getCasheListView) data.get(position);
 
             /************  Set Model values in Holder elements ***********/
 

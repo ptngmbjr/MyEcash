@@ -4,7 +4,7 @@ package com.demo.app.myecash.ListViews;
  * Created by 123 on 8/30/2017.
  */
 
-public class profileLV {
+public class getCasheListView {
 
     private String title = "";
     private String titlebgColor = "";

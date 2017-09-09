@@ -6,17 +6,12 @@ import android.support.annotation.NonNull;
 import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.util.Log;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 
 import com.crashlytics.android.Crashlytics;
@@ -37,13 +32,17 @@ public class MainActivity extends AppCompatActivity
             Intent intent=null;
             switch (item.getItemId()) {
                 case R.id.navigation_getcashe:
-                    intent = new Intent(getApplicationContext(), getCasheActivity.class);
+                    intent = new Intent(getApplicationContext(), GetCasheActivity.class);
+                    break;
                 case R.id.navigation_mycashe:
-                    intent = new Intent(getApplicationContext(), myCashe.class);
+                    intent = new Intent(getApplicationContext(), MyCasheActivity.class);
+                    break;
                 case R.id.navigation_profile:
-                    intent = new Intent(getApplicationContext(), profile.class);
+                    intent = new Intent(getApplicationContext(), ProfileActivity.class);
+                    break;
                 case R.id.navigation_more:
-                    return true;
+                    intent = new Intent(getApplicationContext(), MoreActivity.class);
+                    break;
             }
 
             if(intent!=null) {

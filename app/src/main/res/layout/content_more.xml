@@ -4,14 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.demo.app.myecash.MyCasheActivity">
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.demo.app.myecash.MoreActivity"
+    tools:showIn="@layout/activity_more">
 
-    <TextView
-        android:id="@+id/text_cashe_mesg"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:text="@string/mycashe_no_loans"
-        android:gravity="center|center_vertical"
-        android:textSize="@dimen/listvwdatasize"
-     />
 </android.support.constraint.ConstraintLayout>

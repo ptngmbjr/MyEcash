@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <LinearLayout
@@ -47,12 +48,21 @@
         android:layout_height="0dp"
         android:layout_weight="0.1">
 
-        <ImageView
-            android:id="@+id/image_completeness"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:background="@drawable/ic_profile" />
+        <!--<ImageView-->
+            <!--android:id="@+id/image_completeness"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:background="@drawable/ic_profile" />-->
 
+        <com.carlosmuvi.segmentedprogressbar.SegmentedProgressBar
+            android:id="@+id/segmented_progressbar"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            app:container_color="@color/colorAccent"
+            app:fill_color="@color/colorPrimary"
+            app:gap_size="2dp"
+            app:segment_count="4"
+            />
 
     </LinearLayout>
 
