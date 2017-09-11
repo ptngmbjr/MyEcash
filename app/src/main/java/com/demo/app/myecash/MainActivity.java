@@ -6,6 +6,8 @@ import android.support.annotation.NonNull;
 import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -20,32 +22,59 @@ import java.lang.reflect.Field;
 
 import io.fabric.sdk.android.Fabric;
 
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private ViewPager viewPager;
+    private TabLayout tabLayout;
+
+    private int[] tabIcons = {
+            R.drawable.ic_getcashe,
+            R.drawable.ic_mycashe,
+            R.drawable.ic_profile,
+            R.drawable.ic_more
+    };
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            Intent intent=null;
+            Intent intent = null;
             switch (item.getItemId()) {
                 case R.id.navigation_getcashe:
-                    intent = new Intent(getApplicationContext(), GetCasheActivity.class);
+                   // intent = new Intent(getApplicationContext(), GetCasheActivity.class);
+
+                    viewPager.setCurrentItem(0,false);
                     break;
                 case R.id.navigation_mycashe:
-                    intent = new Intent(getApplicationContext(), MyCasheActivity.class);
+//                    intent = new Intent(getApplicationContext(), MyCasheActivity.class);
+
+                    viewPager.setCurrentItem(1,false);
+
                     break;
                 case R.id.navigation_profile:
-                    intent = new Intent(getApplicationContext(), ProfileActivity.class);
+//                    intent = new Intent(getApplicationContext(), ProfileActivity.class);
+
+                    viewPager.setCurrentItem(2,false);
+
                     break;
                 case R.id.navigation_more:
-                    intent = new Intent(getApplicationContext(), MoreActivity.class);
+//                    intent = new Intent(getApplicationContext(), MoreActivity.class);
+
+                    viewPager.setCurrentItem(3,false);
+
                     break;
             }
 
-            if(intent!=null) {
+            if (intent != null) {
                 startActivity(intent);
                 return true;
             }
@@ -87,6 +116,20 @@ public class MainActivity extends AppCompatActivity
 
         disableShiftMode(navigation);
 
+//        viewPager = (ViewPager) findViewById(R.id.viewpager);
+//        setupViewPager(viewPager);
+
+//
+//        tabLayout = (TabLayout) findViewById(R.id.tabs);
+//        tabLayout.setupWithViewPager(viewPager);
+
+    }
+
+    private void setupTabIcons() {
+        tabLayout.getTabAt(0).setIcon(tabIcons[0]);
+        tabLayout.getTabAt(1).setIcon(tabIcons[1]);
+        tabLayout.getTabAt(2).setIcon(tabIcons[2]);
+        tabLayout.getTabAt(3).setIcon(tabIcons[3]);
     }
 
     private void disableShiftMode(BottomNavigationView view) {
@@ -168,5 +211,43 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void setupViewPager(ViewPager viewPager) {
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        adapter.addFragment(new GetCasheActivity(), "Get CASHe");
+        adapter.addFragment(new MyCasheActivity(), "My CASHe");
+        adapter.addFragment(new ProfileActivity(), "Profile");
+        adapter.addFragment(new MoreActivity(), "More");
+        viewPager.setAdapter(adapter);
+    }
+
+    class ViewPagerAdapter extends FragmentPagerAdapter {
+        private final List<Fragment> mFragmentList = new ArrayList<>();
+        private final List<String> mFragmentTitleList = new ArrayList<>();
+
+        public ViewPagerAdapter(FragmentManager manager) {
+            super(manager);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            return mFragmentList.get(position);
+        }
+
+        @Override
+        public int getCount() {
+            return mFragmentList.size();
+        }
+
+        public void addFragment(Fragment fragment, String title) {
+            mFragmentList.add(fragment);
+            mFragmentTitleList.add(title);
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return mFragmentTitleList.get(position);
+        }
     }
 }
