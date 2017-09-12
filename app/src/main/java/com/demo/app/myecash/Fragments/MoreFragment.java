@@ -1,4 +1,4 @@
-package com.demo.app.myecash;
+package com.demo.app.myecash.Fragments;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -14,13 +14,14 @@ import android.widget.ListView;
 
 import com.demo.app.myecash.Adaptors.moreAdaptor;
 import com.demo.app.myecash.ListViews.moreListView;
+import com.demo.app.myecash.R;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class MoreActivity extends Fragment {
+public class MoreFragment extends Fragment {
 
-    public MoreActivity() {
+    public MoreFragment() {
         // Required empty public constructor
     }
 

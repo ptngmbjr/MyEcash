@@ -1,4 +1,4 @@
-package com.demo.app.myecash;
+package com.demo.app.myecash.Fragments;
 
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
@@ -7,10 +7,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class MyCasheActivity extends Fragment {
+import com.demo.app.myecash.R;
+
+public class MyCasheFragment extends Fragment {
 
 
-    public MyCasheActivity() {
+    public MyCasheFragment() {
         // Required empty public constructor
     }
 

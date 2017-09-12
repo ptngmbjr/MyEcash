@@ -17,6 +17,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.crashlytics.android.Crashlytics;
+import com.demo.app.myecash.Fragments.GetCasheFragment;
+import com.demo.app.myecash.Fragments.MoreFragment;
+import com.demo.app.myecash.Fragments.MyCasheFragment;
+import com.demo.app.myecash.Fragments.ProfileFragment;
 
 import java.lang.reflect.Field;
 
@@ -50,24 +54,24 @@ public class MainActivity extends AppCompatActivity
             Intent intent = null;
             switch (item.getItemId()) {
                 case R.id.navigation_getcashe:
-                   // intent = new Intent(getApplicationContext(), GetCasheActivity.class);
+                   // intent = new Intent(getApplicationContext(), GetCasheFragment.class);
 
                     viewPager.setCurrentItem(0,false);
                     break;
                 case R.id.navigation_mycashe:
-//                    intent = new Intent(getApplicationContext(), MyCasheActivity.class);
+//                    intent = new Intent(getApplicationContext(), MyCasheFragment.class);
 
                     viewPager.setCurrentItem(1,false);
 
                     break;
                 case R.id.navigation_profile:
-//                    intent = new Intent(getApplicationContext(), ProfileActivity.class);
+//                    intent = new Intent(getApplicationContext(), ProfileFragment.class);
 
                     viewPager.setCurrentItem(2,false);
 
                     break;
                 case R.id.navigation_more:
-//                    intent = new Intent(getApplicationContext(), MoreActivity.class);
+//                    intent = new Intent(getApplicationContext(), MoreFragment.class);
 
                     viewPager.setCurrentItem(3,false);
 
@@ -215,10 +219,10 @@ public class MainActivity extends AppCompatActivity
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new GetCasheActivity(), "Get CASHe");
-        adapter.addFragment(new MyCasheActivity(), "My CASHe");
-        adapter.addFragment(new ProfileActivity(), "Profile");
-        adapter.addFragment(new MoreActivity(), "More");
+        adapter.addFragment(new GetCasheFragment(), "Get CASHe");
+        adapter.addFragment(new MyCasheFragment(), "My CASHe");
+        adapter.addFragment(new ProfileFragment(), "Profile");
+        adapter.addFragment(new MoreFragment(), "More");
         viewPager.setAdapter(adapter);
     }
 

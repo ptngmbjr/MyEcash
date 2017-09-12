@@ -26,13 +26,14 @@
             android:name="io.fabric.ApiKey"
             android:value="73ab6bf0bc0b3760a1fd1ac9ff9fc4ba35c3106a" />
 
-        <!--<activity android:name=".GetCasheActivity" />-->
-        <!--<activity android:name=".MyCasheActivity" />-->
-        <!--<activity android:name=".ProfileActivity" />-->
-        <!--<activity-->
-            <!--android:name=".MoreActivity"-->
-            <!--android:label="@string/title_activity_more"-->
-            <!--android:theme="@style/AppTheme.NoActionBar"></activity>-->
+        <!-- <activity android:name=".GetCasheFragment" /> -->
+        <!-- <activity android:name=".MyCasheFragment" /> -->
+        <!-- <activity android:name=".ProfileFragment" /> -->
+        <!-- <activity -->
+        <!-- android:name=".MoreFragment" -->
+        <!-- android:label="@string/title_activity_more" -->
+        <!-- android:theme="@style/AppTheme.NoActionBar"></activity> -->
+        <activity android:name=".PersonalDetailsActivity"></activity>
     </application>
 
 </manifest>

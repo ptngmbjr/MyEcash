@@ -1,28 +1,26 @@
-package com.demo.app.myecash;
+package com.demo.app.myecash.Fragments;
 
-import android.app.Activity;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.demo.app.myecash.ListViews.getCasheListView;
 import com.demo.app.myecash.Adaptors.getCasheAdaptor;
+import com.demo.app.myecash.R;
 
 import java.util.ArrayList;
 
-public class GetCasheActivity extends Fragment {
+public class GetCasheFragment extends Fragment {
 
     ListView list;
     getCasheAdaptor adapter;
-    public GetCasheActivity CustomListView = null;
+    public GetCasheFragment CustomListView = null;
     public ArrayList<getCasheListView> CustomListViewValuesArr = new ArrayList<getCasheListView>();
 
-    public GetCasheActivity() {
+    public GetCasheFragment() {
         // Required empty public constructor
     }
 

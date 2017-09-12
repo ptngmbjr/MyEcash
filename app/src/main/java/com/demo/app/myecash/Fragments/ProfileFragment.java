@@ -1,28 +1,26 @@
-package com.demo.app.myecash;
+package com.demo.app.myecash.Fragments;
 
-import android.content.res.Resources;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.demo.app.myecash.Adaptors.profileAdaptor;
 import com.demo.app.myecash.ListViews.profileListView;
+import com.demo.app.myecash.R;
 
 import java.util.ArrayList;
 
-public class ProfileActivity extends Fragment {
+public class ProfileFragment extends Fragment {
 
     ListView list;
     profileAdaptor adapter;
-    public ProfileActivity CustomListView = null;
+    public ProfileFragment CustomListView = null;
     public ArrayList<profileListView> CustomListViewValuesArr = new ArrayList<profileListView>();
 
-    public ProfileActivity() {
+    public ProfileFragment() {
         // Required empty public constructor
     }
 

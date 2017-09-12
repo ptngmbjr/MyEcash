@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.demo.app.myecash.PersonalDetailsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="1000dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_basic_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:paddingTop="15dp"
+                android:text="BASIC INFO"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tv_full_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_basic_info"
+                android:layout_marginLeft="15dp"
+                android:paddingTop="15dp"
+                android:text="FULL NAME" />
+
+            <EditText
+                android:id="@+id/et_full_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_full_name"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/tv_mobile_no"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_full_name"
+                android:layout_marginLeft="15dp"
+                android:paddingTop="15dp"
+                android:text="MOBILE NUMBER" />
+
+            <EditText
+                android:id="@+id/et_mobile_no"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_mobile_no"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp" />
+
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_mobile_no"
+                android:layout_marginLeft="15dp"
+                android:paddingTop="15dp"
+                android:text="EMAIL" />
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_email"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp" />
+
+            <LinearLayout
+                android:id="@+id/ll_gender"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_mobile_no"
+                android:layout_marginLeft="15dp"
+                android:orientation="horizontal"
+                android:paddingTop="15dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/tv_gender"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.3"
+                    android:gravity="center_vertical"
+                    android:text="GENDER" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup_gender"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.7"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_male"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.5"
+                        android:checked="false"
+                        android:text="Male" />
+
+                    <RadioButton
+                        android:id="@+id/rb_female"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.5"
+                        android:checked="false"
+                        android:text="Female" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_dob"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_gender"
+                android:layout_marginLeft="15dp"
+                android:paddingTop="15dp"
+                android:text="DATE OF BIRTH" />
+
+            <EditText
+                android:id="@+id/et_dob"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_dob"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/tv_additional_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_dob"
+                android:layout_marginLeft="15dp"
+                android:paddingTop="15dp"
+                android:text="ADDITIONAL INFO" />
+
+            <EditText
+                android:id="@+id/et_pancard"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_additional_info"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:hint="PAN CARD" />
+
+            <TextView
+                android:id="@+id/tv_education"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_pancard"
+                android:layout_marginLeft="15dp"
+                android:paddingTop="15dp"
+                android:text="EDUCATIONAL QUALICATION" />
+
+            <EditText
+                android:id="@+id/et_education"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_education"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:hint="EDUCATION" />
+
+            <TextView
+                android:id="@+id/tv_residence"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_education"
+                android:layout_marginLeft="15dp"
+                android:paddingTop="15dp"
+                android:text="RESIDENTIAL INFO" />
+
+            <EditText
+                android:id="@+id/et_landline"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_residence"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:hint="LANDLINE NUMBER" />
+
+            <TextView
+                android:id="@+id/tv_current_address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_landline"
+                android:layout_marginLeft="15dp"
+                android:paddingTop="15dp"
+                android:text="CURRENT ADDRESS" />
+
+            <EditText
+                android:id="@+id/et_current_address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_current_address"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:hint="ADDRESS" />
+
+
+            <TextView
+                android:id="@+id/tv_permanent_address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_current_address"
+                android:layout_marginLeft="15dp"
+                android:paddingTop="15dp"
+                android:text="PERMANENT ADDRESS" />
+
+            <EditText
+                android:id="@+id/et_permanent_address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_permanent_address"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:hint="PERMANENT ADDRESS" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
