@@ -17,5 +17,6 @@
     <string name="mycashe_no_loans">There are no loans to show. Please apply for a loan in GET CASHe</string>
     <string name="text_profile_info_mesg">Please ensure your profile is 100% complete Update your profile regularly to get maximum CASHe</string>
     <string name="title_activity_more">MoreActivity</string>
+    <string name="title_activity_photo_proofs">PhotoProofsActivity</string>
 
 </resources>

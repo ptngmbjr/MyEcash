@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.demo.app.myecash.PersonalDetailsActivity">
+
+    <TextView
+                android:id="@+id/tv_employer_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:paddingTop="15dp"
+                android:text="EMPLOYER NAME" />
+
+            <EditText
+                android:id="@+id/et_employer_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_employer_name"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_landline"
+        android:layout_below="@+id/et_employer_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_landline_no"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.7"
+                android:hint="LANDLINE NUMBER"
+                android:layout_marginTop="10dp" />
+
+
+            <EditText
+                android:id="@+id/et_extension"
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="15dp"
+                android:hint="EXTENSION"
+                android:layout_marginTop="10dp" />
+
+        </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_official_email"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_landline"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:hint="OFFICAIL EMAIL"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/tv_working_since"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_official_email"
+                android:layout_marginLeft="15dp"
+                android:paddingTop="15dp"
+                android:text="WORKING SINCE" />
+
+            <EditText
+                android:id="@+id/et_working_since"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_working_since"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_designation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_working_since"
+                android:layout_marginLeft="15dp"
+                android:paddingTop="15dp"
+                android:text="DESIGNATION" />
+
+            <EditText
+                android:id="@+id/et_designation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_designation"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_net_sal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_designation"
+                android:layout_marginLeft="15dp"
+                android:paddingTop="15dp"
+                android:text="NET MONTHLY SALARY" />
+
+            <EditText
+                android:id="@+id/et_net_sal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_net_sal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                 />
+
+            <EditText
+                android:id="@+id/et_office_address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_net_sal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:hint="OFFICE ADDRESS" />
+
+</LinearLayout>

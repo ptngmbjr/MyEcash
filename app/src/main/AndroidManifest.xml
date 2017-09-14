@@ -33,7 +33,11 @@
         <!-- android:name=".MoreFragment" -->
         <!-- android:label="@string/title_activity_more" -->
         <!-- android:theme="@style/AppTheme.NoActionBar"></activity> -->
-        <activity android:name=".PersonalDetailsActivity"></activity>
+        <activity android:name=".PersonalDetailsActivity" />
+        <activity
+            android:name=".PhotoProofsActivity"
+            android:label="@string/title_activity_photo_proofs"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
