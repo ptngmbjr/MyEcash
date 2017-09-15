@@ -8,4 +8,9 @@
     tools:context="com.demo.app.myecash.PhotoProofsActivity"
     tools:showIn="@layout/activity_photo_proofs">
 
+    <ListView
+        android:id="@+id/list_photos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 </android.support.constraint.ConstraintLayout>

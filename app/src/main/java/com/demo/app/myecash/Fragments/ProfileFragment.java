@@ -1,5 +1,6 @@
 package com.demo.app.myecash.Fragments;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,7 +9,12 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.demo.app.myecash.Adaptors.profileAdaptor;
+import com.demo.app.myecash.BankDetailsActivity;
+import com.demo.app.myecash.EmploymentDetailsActivity;
+import com.demo.app.myecash.Enums.profileEnum;
 import com.demo.app.myecash.ListViews.profileListView;
+import com.demo.app.myecash.PersonalDetailsActivity;
+import com.demo.app.myecash.PhotoProofsActivity;
 import com.demo.app.myecash.R;
 
 import java.util.ArrayList;
@@ -65,19 +71,41 @@ public class ProfileFragment extends Fragment {
 
     public void setListData() {
 
-        for (int i = 0; i < 11; i++) {
+        final profileListView sched = new profileListView();
 
-            final profileListView sched = new profileListView();
+        /******* Firstly take data in model object ******/
 
-            /******* Firstly take data in model object ******/
+        sched.setProfile_image("ic_profile.png");
+        sched.setProfile_title("PERSONAL DETAILS");
+        sched.setProfile_completeness("50% COMPLETE");
+        sched.setId(profileEnum.PERSONAL_DETAILS);
 
-            sched.setProfile_image("ic_profile.png");
-            sched.setProfile_title("PERSONAL DETAILS");
-            sched.setProfile_completeness("50% COMPLETE");
+        /******** Take Model Object in ArrayList **********/
+        CustomListViewValuesArr.add(sched);
 
-            /******** Take Model Object in ArrayList **********/
-            CustomListViewValuesArr.add(sched);
-        }
+        sched.setProfile_image("ic_business.png");
+        sched.setProfile_title("EMPLOYMENT DETAILS");
+        sched.setProfile_completeness("66% COMPLETE");
+        sched.setId(profileEnum.EMPLOYEMENT_DETAILS);
+
+        /******** Take Model Object in ArrayList **********/
+        CustomListViewValuesArr.add(sched);
+
+        sched.setProfile_image("ic_getcashe.png");
+        sched.setProfile_title("BANK DETAILS");
+        sched.setProfile_completeness("0% COMPLETE");
+        sched.setId(profileEnum.BANK_DETAILS);
+
+        /******** Take Model Object in ArrayList **********/
+        CustomListViewValuesArr.add(sched);
+
+        sched.setProfile_image("ic_photo.png");
+        sched.setProfile_title("PHOTO PROOFS");
+        sched.setProfile_completeness("20% COMPLETE");
+        sched.setId(profileEnum.PHOTO_PROOFS);
+
+        /******** Take Model Object in ArrayList **********/
+        CustomListViewValuesArr.add(sched);
 
     }
 
@@ -86,8 +114,26 @@ public class ProfileFragment extends Fragment {
     public void onItemClick(int mPosition) {
         profileListView tempValues = (profileListView) CustomListViewValuesArr.get(mPosition);
 
-//        Toast.makeText(CustomListView,
-//                "" + tempValues.getProfile_title(), Toast.LENGTH_LONG)
-//                .show();
+        Intent intent = null;
+
+        switch (tempValues.getId()) {
+            case PERSONAL_DETAILS:
+                intent = new Intent(this.getContext(), PersonalDetailsActivity.class);
+                break;
+
+            case EMPLOYEMENT_DETAILS:
+                intent = new Intent(this.getContext(), EmploymentDetailsActivity.class);
+                break;
+
+            case BANK_DETAILS:
+                intent = new Intent(this.getContext(), BankDetailsActivity.class);
+                break;
+
+            case PHOTO_PROOFS:
+                intent = new Intent(this.getContext(), PhotoProofsActivity.class);
+                break;
+        }
+        if (intent != null)
+            startActivity(intent);
     }
 }

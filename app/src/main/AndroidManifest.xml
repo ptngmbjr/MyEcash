@@ -37,7 +37,8 @@
         <activity
             android:name=".PhotoProofsActivity"
             android:label="@string/title_activity_photo_proofs"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".UploadPicturesActivity"></activity>
     </application>
 
 </manifest>

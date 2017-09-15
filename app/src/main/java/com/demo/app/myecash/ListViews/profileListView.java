@@ -1,5 +1,7 @@
 package com.demo.app.myecash.ListViews;
 
+import com.demo.app.myecash.Enums.profileEnum;
+
 /**
  * Created by 123 on 8/30/2017.
  */
@@ -10,7 +12,15 @@ public class profileListView {
     private String profile_title = "";
     private String profile_completeness = "";
     private String profile_completness_image = "";
+    private profileEnum id;
 
+    public profileEnum getId() {
+        return id;
+    }
+
+    public void setId(profileEnum id) {
+        this.id = id;
+    }
 
     public String getProfile_image() {
         return profile_image;
