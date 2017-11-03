@@ -1,6 +1,7 @@
 package com.demo.app.myecash.Adaptors;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.content.Context;
 import android.content.res.Resources;
 import android.util.Log;
@@ -24,7 +25,7 @@ import java.util.ArrayList;
 public class getCasheAdaptor extends BaseAdapter implements View.OnClickListener {
 
     /*********** Declare Used Variables *********/
-    private Activity activity;
+    private Fragment activity;
     private ArrayList data;
     private static LayoutInflater inflater = null;
     public Resources res;
@@ -32,16 +33,16 @@ public class getCasheAdaptor extends BaseAdapter implements View.OnClickListener
     int i = 0;
 
     /*************  CustomAdapter Constructor *****************/
-    public getCasheAdaptor(Activity a, ArrayList d, Resources resLocal) {
+    public getCasheAdaptor(LayoutInflater fragInflator,Fragment fragment, ArrayList d, Resources resLocal) {
 
         /********** Take passed values **********/
-        activity = a;
+        activity = fragment;
         data = d;
         res = resLocal;
 
         /***********  Layout inflator to call external xml layout () ***********/
-        inflater = (LayoutInflater) activity.
-                getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+       // inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        inflater=fragInflator;
 
     }
 

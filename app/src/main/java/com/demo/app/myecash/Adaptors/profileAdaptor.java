@@ -1,6 +1,7 @@
 package com.demo.app.myecash.Adaptors;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.content.Context;
 import android.content.res.Resources;
 import android.util.Log;
@@ -11,6 +12,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.demo.app.myecash.Fragments.ProfileFragment;
 import com.demo.app.myecash.ListViews.profileListView;
 import com.demo.app.myecash.R;
 
@@ -23,7 +25,7 @@ import java.util.ArrayList;
 public class profileAdaptor extends BaseAdapter implements View.OnClickListener {
 
     /*********** Declare Used Variables *********/
-    private Activity activity;
+    private Fragment activity;
     private ArrayList data;
     private static LayoutInflater inflater = null;
     public Resources res;
@@ -31,7 +33,7 @@ public class profileAdaptor extends BaseAdapter implements View.OnClickListener 
     int i = 0;
 
     /*************  CustomAdapter Constructor *****************/
-    public profileAdaptor(Activity a, ArrayList d, Resources resLocal) {
+    public profileAdaptor(Fragment a, LayoutInflater fragInflator, ArrayList d, Resources resLocal) {
 
         /********** Take passed values **********/
         activity = a;
@@ -39,9 +41,8 @@ public class profileAdaptor extends BaseAdapter implements View.OnClickListener 
         res = resLocal;
 
         /***********  Layout inflator to call external xml layout () ***********/
-        inflater = (LayoutInflater) activity.
-                getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
+        inflater = fragInflator;
     }
 
     /******** What is the size of Passed Arraylist Size ************/
@@ -102,7 +103,7 @@ public class profileAdaptor extends BaseAdapter implements View.OnClickListener 
 
             /************  Set Model values in Holder elements ***********/
 
-          //  holder.icon_img.setImageDrawable(activity.getResources().getDrawable(R.drawable.ic_profile));
+            //  holder.icon_img.setImageDrawable(activity.getResources().getDrawable(R.drawable.ic_profile));
             holder.title.setText(tempValues.getProfile_title());
             holder.completeness.setText(tempValues.getProfile_completeness());
 
@@ -134,12 +135,12 @@ public class profileAdaptor extends BaseAdapter implements View.OnClickListener 
         @Override
         public void onClick(View arg0) {
 
-//
-//            CustomListViewAndroidExample sct = (CustomListViewAndroidExample) activity;
-//
-//            /****  Call  onItemClick Method inside CustomListViewAndroidExample Class ( See Below )****/
-//
-//            sct.onItemClick(mPosition);
+
+            ProfileFragment sct = (ProfileFragment) activity;
+
+            /****  Call  onItemClick Method inside CustomListViewAndroidExample Class ( See Below )****/
+
+            sct.onItemClick(mPosition);
         }
     }
 }

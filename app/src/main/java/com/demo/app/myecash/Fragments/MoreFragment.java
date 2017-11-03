@@ -1,9 +1,10 @@
 package com.demo.app.myecash.Fragments;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
@@ -12,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
+import com.demo.app.myecash.Adaptors.getCasheAdaptor;
 import com.demo.app.myecash.Adaptors.moreAdaptor;
 import com.demo.app.myecash.ListViews.moreListView;
 import com.demo.app.myecash.R;
@@ -19,51 +21,50 @@ import com.demo.app.myecash.R;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import static android.R.id.list;
+
 public class MoreFragment extends Fragment {
 
-    public MoreFragment() {
-        // Required empty public constructor
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.activity_more, container, false);
+
+        View v = inflater.inflate(R.layout.activity_more, null);
+
+
+//        /******** Take some data in Arraylist ( CustomListViewValuesArr ) ***********/
+//        setListData();
+//
+//        Resources res = getResources();
+//        list = (ListView) v.findViewById(R.id.list);  // List defined in XML ( See Below )
+//
+//        /**************** Create Custom Adapter *********/
+//        adapter = new getCasheAdaptor(inflater, this, CustomListViewValuesArr, res);
+//        list.setAdapter(adapter);
+//        return v;
+
+        ArrayList items = new ArrayList();
+
+        //Add fake data to our list - notice unsorted order
+        items.add(new moreListView("ic_profile.png", "HELP DESK", "Actions"));
+        items.add(new moreListView("ic_profile.png", "REFER & EARN", "Actions"));
+        items.add(new moreListView("ic_profile.png", "ABOUT", "Info"));
+        items.add(new moreListView("ic_profile.png", "HOW TO REPAY", "Info"));
+        items.add(new moreListView("ic_profile.png", "SEE HOW CASHe WORKS?", "Info"));
+        items.add(new moreListView("ic_profile.png", "LOGOUT", "Info"));
+
+        ListView list = (ListView) v.findViewById(R.id.list_more);
+
+        items = sortAndAddSections(items);
+
+        moreAdaptor adapter = new moreAdaptor(inflater, this.getActivity().getApplicationContext(), items);
+        list.setAdapter(adapter);
+
+        return v;
 
     }
-
-//        @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_more);
-////        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-////        setSupportActionBar(toolbar);
-//
-//        ArrayList items = new ArrayList();
-//
-//        //Add fake data to our list - notice unsorted order
-//        items.add(new moreListView("ic_profile.png","HELP DESK", "Actions"));
-//        items.add(new moreListView("ic_profile.png","REFER & EARN", "Actions"));
-//        items.add(new moreListView("ic_profile.png","ABOUT", "Info"));
-//        items.add(new moreListView("ic_profile.png","HOW TO REPAY", "Info"));
-//        items.add(new moreListView("ic_profile.png","SEE HOW CASHe WORKS?", "Info"));
-//        items.add(new moreListView("ic_profile.png","LOGOUT", "Info"));
-//
-//        ListView list = (ListView) findViewById(R.id.list_more);
-//
-//        items = sortAndAddSections(items);
-//
-//        moreAdaptor adapter = new moreAdaptor(this, items);
-//        list.setAdapter(adapter);
-//    }
 
     private ArrayList sortAndAddSections(ArrayList itemList) {
 

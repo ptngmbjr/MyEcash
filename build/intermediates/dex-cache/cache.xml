@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\ap250532\.android\build-cache\b3fcc4808ab64bd8415fa447787f26866e73a510\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="01a90bbb9495a8bbf6f3cfdf12f1b35caaa9524b">
+        <dex dex="C:\Users\ap250532\Documents\Projects\Personal\MyEcash\trunk\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_70c31c615d59139185e759fb423b99932ad8944a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ap250532\.android\build-cache\8d9964d0e77891d286343358fa48c4d6b685ccb3\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="724ce977487ab3a215d4d2eb47d8dccd9f30013f">
+        <dex dex="C:\Users\ap250532\Documents\Projects\Personal\MyEcash\trunk\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_35f9aea6c7cdeab9ca28bb069196f77c33b16ad3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ap250532\.android\build-cache\518ad9c6cf3c6066c1dd95d3d2753f6a6609cf2a\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="dcf8c83c3dead00a6c4fe313e95f7aaca20dc641">
+        <dex dex="C:\Users\ap250532\Documents\Projects\Personal\MyEcash\trunk\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_49e70f16030b9b2bbfbb017dfcf3fcef69a5c5bb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ap250532\.android\build-cache\bfdbf3a4e00d15ae1f1fe0d59a14e204264d00db\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6d9ed9a288364688e7fcf6704776284dac1eb42e">
+        <dex dex="C:\Users\ap250532\Documents\Projects\Personal\MyEcash\trunk\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_19e56ac1d8777f87c8a2db44a042ff7a565fd24c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ap250532\.android\build-cache\da1bf6813c80a30be6119d1b51ee06cdebec265d\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="af6ee25641df3142059c0828517aa7ee6eba08d6">
+        <dex dex="C:\Users\ap250532\Documents\Projects\Personal\MyEcash\trunk\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c0616ed0e7b983971220794a3ad991ae87e48822\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ap250532\.android\build-cache\e64afdd4a5e843c75a9b66bc6bae3e99575e3d61\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9aedc597d74c6d77258ce5236e9abff0c3cc65e3">
+        <dex dex="C:\Users\ap250532\Documents\Projects\Personal\MyEcash\trunk\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a6f62fd10d6f377463d299275324b4fb568d32ff\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ap250532\.android\build-cache\42ffc62a3b9e4d2066d98658efee4d8d003df9e1\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2c6fcd6267cbac6509a2e72a61127534a1d616cf">
+        <dex dex="C:\Users\ap250532\Documents\Projects\Personal\MyEcash\trunk\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_71ba0bfe59dcde4e5df1015e372b349209683ae4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ap250532\.android\build-cache\4debd63448a777b9c8c7c730f73dbba83caec8bd\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9c9bdb4b2497465a6cf7d5e8f57c5298f828a380">
+        <dex dex="C:\Users\ap250532\Documents\Projects\Personal\MyEcash\trunk\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_6c278f02f19051c60f3ee6d18ed7d45cfe58bf9f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ap250532\.android\build-cache\246c62dcd58e7095a5250514b297995829bd77b3\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="ea34579b1be157cd792376362157e9c54ebb4cd7">
+        <dex dex="C:\Users\ap250532\Documents\Projects\Personal\MyEcash\trunk\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_77a658bf853402a8c510dbf22168e6809312b9f7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ap250532\Documents\Projects\Personal\MyEcash\trunk\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Users\ap250532\Documents\Projects\Personal\MyEcash\trunk\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_ab2f96c17a38219fa2c87b59f7c49c1818347fe6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ap250532\.android\build-cache\fb49e20955e96bd731fd4e0167bc235d517d1131\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="cb4af597d079ffdc0984a3ec2c03cbf6a1b9f869">
+        <dex dex="C:\Users\ap250532\Documents\Projects\Personal\MyEcash\trunk\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b817d822ca5e1b87a513366df7dde78ffac27eae\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ap250532\.android\build-cache\2dbeaee290ad296dee42435db06443a5723579c0\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="71eda10e33212e44245524b5087366ff8d805825">
+        <dex dex="C:\Users\ap250532\Documents\Projects\Personal\MyEcash\trunk\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_1be4d2c725f19928e57f746a026c7f5ec37c171c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ap250532\.android\build-cache\844b33ba126aed85466f9867d787d98a351f5ddd\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="697679619b00837e3d09e9988a2e1e2a9009d502">
+        <dex dex="C:\Users\ap250532\Documents\Projects\Personal\MyEcash\trunk\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d022795c02592947f760d675b77d5afa883290fa\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ap250532\.android\build-cache\d0d1139b0e7dc8ef03294cd3f55eed7ddd0eb197\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="fd76d95678a6b2b8a49bb8a9fb5bcef7aedb70e7">
+        <dex dex="C:\Users\ap250532\Documents\Projects\Personal\MyEcash\trunk\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_961843f5afde44cae918876f37147f938e70d01b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ap250532\.android\build-cache\9e653152b3b27101b8c3cd9e2d506d78c1675163\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b000ecceb9877fefcdc7ab1959ff03df91551656">
+        <dex dex="C:\Users\ap250532\Documents\Projects\Personal\MyEcash\trunk\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e6a0ace3d0297341c06c9cd016be3a4c8120ad8c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ap250532\.android\build-cache\0dce392db981bb7b8aa0b14f2af76a6e0ad467b8\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="ac6948cce36f694f3eb3d73a135e298dc4b3527a">
+        <dex dex="C:\Users\ap250532\Documents\Projects\Personal\MyEcash\trunk\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_53223bdd5dd73baa72e8373f9942c2a1dd3fa5ee\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ap250532\.android\build-cache\06691519d5be47a362ed420ebd0d6364c7447500\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="0c3e81d3eb86b86d194b5cdb6a4de78203f6f7fd">
+        <dex dex="C:\Users\ap250532\Documents\Projects\Personal\MyEcash\trunk\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f26be94e9d15356932c46a51dc33193e48210a21\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ap250532\.android\build-cache\17da760da76c993e1521a0e0968527e17ed35356\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="77f9593d979f4347344be233bd0d888315f79517">
+        <dex dex="C:\Users\ap250532\Documents\Projects\Personal\MyEcash\trunk\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0c6a7fb0ca7901be3366e5380a559ddb2bdf6e34\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ap250532\.android\build-cache\969ebe5f0c60210a9795ac67b7529fe3624255f3\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="345a1b5cf5b144ce18ba6962bc66a7e2f26c1c1b">
+        <dex dex="C:\Users\ap250532\Documents\Projects\Personal\MyEcash\trunk\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_dba3eb7bfb9b215fded75a922b633e5d597a066a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ap250532\.android\build-cache\c076a907a5089eaeecc023129cb51adf7fc73288\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="eb576427887e497cd958a475475f9206e38dc314">
+        <dex dex="C:\Users\ap250532\Documents\Projects\Personal\MyEcash\trunk\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_28fcfbde2a84a799715e99786399cd415c6386d8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ap250532\.android\build-cache\c477a5cc38ef6b50026841ed9ceb44091660a38b\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="0af4f577b4a21eb9be2a7f52e33b077b67e6d9f8">
+        <dex dex="C:\Users\ap250532\Documents\Projects\Personal\MyEcash\trunk\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_557c3574300942e2ad1e350eff559db4ea584f1b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ap250532\.android\build-cache\518ad9c6cf3c6066c1dd95d3d2753f6a6609cf2a\output\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="0632f06970823b7e3436f649bfa65b47035c91d0">
+        <dex dex="C:\Users\ap250532\Documents\Projects\Personal\MyEcash\trunk\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-22.2.0_8e569b6b2561d3693839470f251a7a5d1db07f9f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ap250532\.android\build-cache\ff5c67e4f4b2070c70baa73fd7ec4b5f77fe47d4\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="4b8df1b1e51fe14b0e89b3845dc2e215a024a09f">
+        <dex dex="C:\Users\ap250532\Documents\Projects\Personal\MyEcash\trunk\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_94f5e77e273b1cfc2ed7589573a84e1f5280c018\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ap250532\.android\build-cache\ee743478429b37cb33c5d4bd5d0bbf7fd570018b\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="58adcfbe2c8393765e84c5489d01bba6a5159eb2">
+        <dex dex="C:\Users\ap250532\Documents\Projects\Personal\MyEcash\trunk\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e723f09f3f21496b2ce3311dce978834bdb2d192\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ap250532\.android\build-cache\043538e049ce722a40c326c25306fb483dd57ffe\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="27775d59b16610ac76f1b83693fedd9520396332">
+        <dex dex="C:\Users\ap250532\Documents\Projects\Personal\MyEcash\trunk\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_83bd16a78b83860fe8d1bccf17ac61b183357f4b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ap250532\.android\build-cache\a93b4209ad535fc5c623b8f941c76872b83b3c93\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="744c49c02a27569cc4cc049685d3649e4ef439f2">
+        <dex dex="C:\Users\ap250532\Documents\Projects\Personal\MyEcash\trunk\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7fb7e3fbf44ee9f004b9b5b2a276af488f67a5a0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ap250532\Documents\Projects\Personal\MyEcash\trunk\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e823bc4b441e1a5748954837dc5d09e97be5c057">
+        <dex dex="C:\Users\ap250532\Documents\Projects\Personal\MyEcash\trunk\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_6ac8e2eebab96bbbc2821df548ed0259cfcfd185\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ap250532\.android\build-cache\511230d458fc01c80ed32797addcf13769c858b9\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="0a1897426566e408a5c20a3d931f77d89771d07f">
+        <dex dex="C:\Users\ap250532\Documents\Projects\Personal\MyEcash\trunk\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_67da13bad6323e37db54683af0aae427c21179cf\classes.dex" />
+    </item>
+
+</items>

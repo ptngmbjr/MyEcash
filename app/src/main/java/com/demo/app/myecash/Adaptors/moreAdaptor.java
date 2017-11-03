@@ -18,9 +18,10 @@ public class moreAdaptor extends ArrayAdapter {
 
     LayoutInflater inflater;
 
-    public moreAdaptor(Context context, ArrayList items) {
+    public moreAdaptor(LayoutInflater fragInflator,Context context, ArrayList items) {
         super(context, 0, items);
-        inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+       // inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        inflater=fragInflator;
     }
 
     @Override

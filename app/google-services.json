@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1041551260361",
+    "project_id": "my-ecash"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1041551260361:android:d0d5d5dd62fd5b83",
+        "android_client_info": {
+          "package_name": "com.demo.app.myecash"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1041551260361-1sph7sbmagm6vst503kbll6nn6r5s0pb.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "1041551260361-77sfaoktm5uo1l6o25c0hs5nag3q8vrg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.demo.app.myecash",
+            "certificate_hash": "37dc210cd24933aafd73ed52108edea03b6b4621"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-kCKnurUGW8skGdzQAB1Jgr4BorkgMik"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

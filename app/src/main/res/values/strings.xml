@@ -19,4 +19,17 @@
     <string name="title_activity_more">MoreActivity</string>
     <string name="title_activity_photo_proofs">PhotoProofsActivity</string>
 
+    <string name="facebook_app_id">2050589571841340</string>
+    <string name="fb_login_protocol_scheme">fb2050589571841340</string>
+    <string name="title_activity_login">LoginActivity</string>
+
+    <string name="fb_login_string">Login With Facebook</string>
+
+    <string name="sign_out">Sign Out</string>
+    <string name="disconnect">Disconnect</string>
+
+    <!-- Button text -->
+    <string name="btn_logout_from_google">Logout from Google</string>
+    <string name="btn_revoke_access">Revoke Access</string>
+    <string name="loading">Loading</string>
 </resources>
