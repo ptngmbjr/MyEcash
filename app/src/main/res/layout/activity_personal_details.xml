@@ -48,14 +48,15 @@
                 android:paddingTop="15dp"
                 android:text="FULL NAME" />
 
-            <EditText
-                android:id="@+id/et_full_name"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_full_name"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="10dp" />
+                <EditText
+                    android:id="@+id/et_full_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_full_name"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="FULL NAME" />
 
             <TextView
                 android:id="@+id/tv_mobile_no"
@@ -66,14 +67,15 @@
                 android:paddingTop="15dp"
                 android:text="MOBILE NUMBER" />
 
-            <EditText
-                android:id="@+id/et_mobile_no"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_mobile_no"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="10dp" />
+                <EditText
+                    android:id="@+id/et_mobile_no"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_mobile_no"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="MOBILE NUMBER" />
 
 
             <TextView
@@ -85,14 +87,15 @@
                 android:paddingTop="15dp"
                 android:text="EMAIL" />
 
-            <EditText
-                android:id="@+id/et_email"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_email"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="10dp" />
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_email"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="EMAIL ID" />
 
             <LinearLayout
                 android:id="@+id/ll_gender"
@@ -150,14 +153,18 @@
                 android:paddingTop="15dp"
                 android:text="DATE OF BIRTH" />
 
-            <EditText
-                android:id="@+id/et_dob"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_dob"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="10dp" />
+                <EditText
+                    android:id="@+id/et_dob"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_dob"
+                    android:layout_marginLeft="15dp"
+                    android:clickable="true"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="DOB" />
 
             <TextView
                 android:id="@+id/tv_additional_info"
@@ -204,7 +211,7 @@
                 android:layout_below="@+id/et_education"
                 android:layout_marginLeft="15dp"
                 android:paddingTop="15dp"
-                android:text="RESIDENTIAL INFO" />
+                android:text="LANDLINE NUMBER" />
 
             <EditText
                 android:id="@+id/et_landline"
@@ -225,15 +232,15 @@
                 android:paddingTop="15dp"
                 android:text="CURRENT ADDRESS" />
 
-            <EditText
-                android:id="@+id/et_current_address"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_current_address"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="10dp"
-                android:hint="ADDRESS" />
+                <EditText
+                    android:id="@+id/et_current_address"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_current_address"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="CURRENT ADDRESS" />
 
 
             <TextView

@@ -18,46 +18,62 @@ repositories {
 
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "26.0.1"
+    signingConfigs {
+        config {
+            keyAlias 'myecash'
+            keyPassword 'myecash'
+            storeFile file('C:/Users/ap250532/Documents/Projects/Personal/MyEcash/trunk/app/myecash.keystore')
+            storePassword 'myecash'
+        }
+    }
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
     defaultConfig {
         applicationId "com.demo.app.myecash"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 25
-        versionCode 1
+        versionCode 2
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable true
+            signingConfig signingConfigs.config
+        }
+        debug {
+            debuggable true
+            signingConfig signingConfigs.config
+            minifyEnabled true
         }
     }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
         transitive = true;
     }
-
     android {
         useLibrary 'org.apache.http.legacy'
     }
-
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support:design:25.3.1'
+    //    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:appcompat-v7:26.0.2'
+    compile 'com.android.support:design:26.0.2'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.android.support:support-v4:25.3.1'
-    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.android.support:support-v4:26.0.2'
+    compile 'com.android.support:recyclerview-v7:26.0.2'
     compile 'com.github.carlosmuvi:SegmentedProgressBar:0.6.0'
     compile 'com.facebook.android:facebook-android-sdk:[4,5)'
-    testCompile 'junit:junit:4.12'
-
     compile 'com.google.android.gms:play-services:8.3.0'
     compile 'de.hdodenhof:circleimageview:1.3.0'
+    compile 'com.andrognito.pinlockview:pinlockview:2.1.0'
+    testCompile 'junit:junit:4.12'
+    compile 'com.github.Cutta:GifView:1.1'
+
 }

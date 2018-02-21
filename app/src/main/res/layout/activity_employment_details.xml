@@ -31,7 +31,8 @@
                 android:layout_below="@+id/tv_employer_name"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="10dp"
+                android:hint="EMPLOYER NAME" />
 
     <LinearLayout
         android:id="@+id/ll_landline"
@@ -87,10 +88,13 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_working_since"
+                android:clickable="true"
+                android:editable="false"
+                android:focusable="false"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginTop="10dp"
-                />
+                android:hint="WORKING SINCE" />
 
             <TextView
                 android:id="@+id/tv_designation"
@@ -109,7 +113,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginTop="10dp"
-                />
+                android:hint="DESIGNATION" />
 
             <TextView
                 android:id="@+id/tv_net_sal"
@@ -128,7 +132,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginTop="10dp"
-                 />
+                android:hint="NET MONTHLY SALARY" />
 
             <EditText
                 android:id="@+id/et_office_address"

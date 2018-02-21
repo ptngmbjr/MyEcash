@@ -3,12 +3,16 @@ package com.demo.app.myecash;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.IntentSender;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -37,14 +41,20 @@ import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.plus.Plus;
 
-public class LoginActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+public class LoginActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,
+        View.OnClickListener {
 
     private CallbackManager callbackManager;
     private AccessTokenTracker accessTokenTracker;
-    private ProfileTracker profileTracker;
+//    private ProfileTracker profileTracker;
 
     private static final int RC_SIGN_IN = 007;
     private static final int FB_SIGN_IN = 64206;
+
+    private final int MAIN_ACTIVIY_CODE = 1001;
 
     private static final String TAG = MainActivity.class.getSimpleName();
     private ProgressDialog mProgressDialog;
@@ -56,6 +66,23 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+//        try {
+//            PackageInfo info = getPackageManager().getPackageInfo(
+//                    "com.demo.app.myecash",
+//                    PackageManager.GET_SIGNATURES);
+//            for (Signature signature : info.signatures) {
+//                MessageDigest md = MessageDigest.getInstance("SHA");
+//                md.update(signature.toByteArray());
+//                Log.d("KeyHash:", Base64.encodeToString(md.digest(), Base64.DEFAULT));
+//            }
+//        } catch (PackageManager.NameNotFoundException e) {
+//
+//        } catch (NoSuchAlgorithmException e) {
+//
+//        }
+//
+
+
         FacebookSdk.sdkInitialize(getApplicationContext());
         AppEventsLogger.activateApp(this);
 
@@ -66,14 +93,14 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             }
         };
 
-        profileTracker = new ProfileTracker() {
-            @Override
-            protected void onCurrentProfileChanged(Profile oldProfile, Profile newProfile) {
-                nextActivity(newProfile);
-            }
-        };
+//        profileTracker = new ProfileTracker() {
+//            @Override
+//            protected void onCurrentProfileChanged(Profile oldProfile, Profile newProfile) {
+//                nextActivity(newProfile);
+//            }
+//        };
         accessTokenTracker.startTracking();
-        profileTracker.startTracking();
+//        profileTracker.startTracking();
 
         LoginButton loginButton = (LoginButton) findViewById(R.id.login_button);
         callback = new FacebookCallback<LoginResult>() {
@@ -137,8 +164,6 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     protected void onResume() {
         super.onResume();
         //Facebook login
-        Profile profile = Profile.getCurrentProfile();
-        nextActivity(profile);
     }
 
     @Override
@@ -151,7 +176,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         super.onStop();
         //Facebook login
         accessTokenTracker.stopTracking();
-        profileTracker.stopTracking();
+//        profileTracker.stopTracking();
 
     }
 
@@ -161,11 +186,12 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         }
     }
 
-    private void launchActivity(String name)
-    {
+    private void launchActivity(String name) {
         Intent main = new Intent(LoginActivity.this, MainActivity.class);
-        main.putExtra("name", name);
-        startActivity(main);
+//        main.putExtra("name", name);
+
+        startActivityForResult(main, MAIN_ACTIVIY_CODE);
+//        startActivity(main);
     }
 
     private void signIn() {
@@ -222,9 +248,9 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         int id = v.getId();
 
         switch (id) {
-            case R.id.sign_in_button:
-                signIn();
-                break;
+//            case R.id.sign_in_button:
+//                signIn();
+//                break;
         }
     }
 
@@ -239,6 +265,9 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 break;
             case FB_SIGN_IN:
                 callbackManager.onActivityResult(requestCode, resultCode, data);
+                break;
+            case MAIN_ACTIVIY_CODE:
+                finish();
                 break;
 
 
@@ -269,6 +298,10 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 }
             });
         }
+
+//        Profile profile = Profile.getCurrentProfile();
+//        nextActivity(profile);
+
     }
 
     @Override

@@ -24,14 +24,15 @@
         android:paddingTop="15dp"
         android:text="BANK NAME" />
 
-    <EditText
-        android:id="@+id/et_bank_name"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_bank_name"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="10dp" />
+            <EditText
+                android:id="@+id/et_bank_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_bank_name"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:hint="BANK NAME" />
 
     <TextView
         android:id="@+id/tv_account_number"
@@ -42,15 +43,15 @@
         android:paddingTop="15dp"
         android:text="ACCOUNT NUMBER" />
 
-    <EditText
-        android:id="@+id/et_account_no"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_account_number"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="10dp"
-        />
+            <EditText
+                android:id="@+id/et_account_no"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_account_number"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:hint="ACCOUNT NUMBER" />
 
     <TextView
         android:id="@+id/tv_confirm_account_no"
@@ -61,15 +62,15 @@
         android:paddingTop="15dp"
         android:text="CONFIRM ACCOUNT NO" />
 
-    <EditText
-        android:id="@+id/et_confirm_ac_no"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_confirm_account_no"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="10dp"
-        />
+            <EditText
+                android:id="@+id/et_confirm_ac_no"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_confirm_account_no"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:hint="CONFIRM A/C NO" />
 
     <TextView
         android:id="@+id/tv_ifsc"
@@ -80,15 +81,15 @@
         android:paddingTop="15dp"
         android:text="IFSC CODE" />
 
-    <EditText
-        android:id="@+id/et_ifsc"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_ifsc"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="10dp"
-        />
+            <EditText
+                android:id="@+id/et_ifsc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_ifsc"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:hint="IFSC" />
 
         </LinearLayout>
     </ScrollView>

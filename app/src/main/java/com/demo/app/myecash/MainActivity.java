@@ -19,6 +19,7 @@ import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.TabLayout;
 import android.util.AttributeSet;
+import android.util.Base64;
 import android.util.Log;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -39,6 +40,7 @@ import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
+import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Field;
 
 import io.fabric.sdk.android.Fabric;
@@ -46,12 +48,16 @@ import io.fabric.sdk.android.Fabric;
 import android.app.FragmentTransaction;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private final DialogHelper progressDialogHelper = new DialogHelper(this);
+
     Toolbar toolbar;
+    private int exitVariable = 0;
 
 
     private int[] tabIcons = {
@@ -167,7 +173,14 @@ public class MainActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            exitVariable++;
+
+            if (exitVariable >= 2) {
+                finish();
+            } else
+                Toast.makeText(this, R.string.exittext, Toast.LENGTH_SHORT).show();
+//            super.onBackPressed();
+
         }
     }
 
@@ -181,5 +194,67 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    public static boolean isEmpty(Context c,EditText value) {
+        boolean val = false;
+        if (value.getText().toString().length() <= 0) {
+            showToast(c,value.getHint().toString() + " cannot be empty");
+            val = true;
+        }
+        return val;
+    }
+
+    public static void showToast(Context c,String text) {
+        Toast.makeText(c, text, Toast.LENGTH_SHORT).show();
+
+    }
+
+    public static boolean isValidMail(Context c,String email) {
+        boolean valid = android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
+        if (valid != true)
+            showToast(c, "Not a valid email address");
+        return valid;
+    }
+
+    public static boolean isValidMobile(Context c,String phone) {
+        boolean valid = android.util.Patterns.PHONE.matcher(phone).matches();
+        if (valid != true)
+            MainActivity.showToast(c, "Not a valid mobile number");
+        return valid;
+    }
+
+    public static boolean isValidDate(Context c,String date) {
+        DateValidator dateValidator = new DateValidator();
+        boolean validity = dateValidator.validate(date);
+        if (validity == false)
+            MainActivity.showToast(c, "Invalid DOB");
+        return validity;
+    }
+
+    public static String getDataForKey(String reqID) {
+
+        String serverURL = "";
+
+        serverURL = "http://ec2-54-158-110-110.compute-1.amazonaws.com:9090/";
+
+        String data = "";
+        switch (reqID) {
+            case Constants.CREATE_CUSTOMER:
+                data = serverURL + "cust";
+                break;
+            case Constants.UPDATE_BANK_DETAILS:
+                data = serverURL + "bankDetails/17";
+                break;
+            case Constants.UPATE_PROFESSION_DETAILS:
+                data = serverURL + "profession/18";
+                break;
+            default:
+                break;
+        }
+
+        return data;
+
+    }
+
 
 }
