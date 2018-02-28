@@ -39,12 +39,11 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.OptionalPendingResult;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
-import com.google.android.gms.plus.Plus;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public class LoginActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,
+public class LoginActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener,
         View.OnClickListener {
 
     private CallbackManager callbackManager;
@@ -58,6 +57,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
 
     private static final String TAG = MainActivity.class.getSimpleName();
     private ProgressDialog mProgressDialog;
+
     private GoogleApiClient mGoogleApiClient;
     private SignInButton btnSignIn;
 
@@ -80,7 +80,6 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         } catch (NoSuchAlgorithmException e) {
 
         }
-
 
 
         FacebookSdk.sdkInitialize(getApplicationContext());
@@ -123,9 +122,9 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         loginButton.setReadPermissions("user_friends");
         loginButton.registerCallback(callbackManager, callback);
 
+        //google plus changes over here
 
         btnSignIn = (SignInButton) findViewById(R.id.sign_in_button);
-
         btnSignIn.setOnClickListener(this);
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -137,9 +136,8 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
 
-        // Customizing G+ button
-        btnSignIn.setSize(SignInButton.SIZE_STANDARD);
         btnSignIn.setScopes(gso.getScopeArray());
+
     }
 
 
@@ -194,63 +192,15 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
 //        startActivity(main);
     }
 
-    private void signIn() {
-        Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
-        startActivityForResult(signInIntent, RC_SIGN_IN);
-    }
-
-
-    private void signOut() {
-        Auth.GoogleSignInApi.signOut(mGoogleApiClient).setResultCallback(
-                new ResultCallback<Status>() {
-                    @Override
-                    public void onResult(Status status) {
-                        updateUI(false);
-                    }
-                });
-    }
-
-    private void revokeAccess() {
-        Auth.GoogleSignInApi.revokeAccess(mGoogleApiClient).setResultCallback(
-                new ResultCallback<Status>() {
-                    @Override
-                    public void onResult(Status status) {
-                        updateUI(false);
-                    }
-                });
-    }
-
-    private void handleSignInResult(GoogleSignInResult result) {
-        Log.d(TAG, "handleSignInResult:" + result.isSuccess());
-        if (result.isSuccess()) {
-            // Signed in successfully, show authenticated UI.
-            GoogleSignInAccount acct = result.getSignInAccount();
-
-            Log.e(TAG, "display name: " + acct.getDisplayName());
-
-            String personName = acct.getDisplayName();
-            String personPhotoUrl = acct.getPhotoUrl().toString();
-            String email = acct.getEmail();
-
-            Log.e(TAG, "Name: " + personName + ", email: " + email
-                    + ", Image: " + personPhotoUrl);
-
-            updateUI(true);
-            launchActivity(personName);
-        } else {
-            // Signed out, show unauthenticated UI.
-            updateUI(false);
-        }
-    }
 
     @Override
     public void onClick(View v) {
         int id = v.getId();
 
         switch (id) {
-//            case R.id.sign_in_button:
-//                signIn();
-//                break;
+            case R.id.sign_in_button:
+                signIn();
+                break;
         }
     }
 
@@ -278,38 +228,33 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     public void onStart() {
         super.onStart();
 
-//        OptionalPendingResult<GoogleSignInResult> opr = Auth.GoogleSignInApi.silentSignIn(mGoogleApiClient);
-//        if (opr.isDone()) {
-//            // If the user's cached credentials are valid, the OptionalPendingResult will be "done"
-//            // and the GoogleSignInResult will be available instantly.
-//            Log.d(TAG, "Got cached sign-in");
-//            GoogleSignInResult result = opr.get();
-//            handleSignInResult(result);
-//        } else {
-//            // If the user has not previously signed in on this device or the sign-in has expired,
-//            // this asynchronous branch will attempt to sign in the user silently.  Cross-device
-//            // single sign-on will occur in this branch.
-//            showProgressDialog();
-//            opr.setResultCallback(new ResultCallback<GoogleSignInResult>() {
-//                @Override
-//                public void onResult(GoogleSignInResult googleSignInResult) {
-//                    hideProgressDialog();
-//                    handleSignInResult(googleSignInResult);
-//                }
-//            });
-//        }
-
         Profile profile = Profile.getCurrentProfile();
-        nextActivity(profile);
+
+        OptionalPendingResult<GoogleSignInResult> opr = Auth.GoogleSignInApi.silentSignIn(mGoogleApiClient);
+        if (opr.isDone()) {
+            // If the user's cached credentials are valid, the OptionalPendingResult will be "done"
+            // and the GoogleSignInResult will be available instantly.
+            Log.d(TAG, "Got cached sign-in");
+            GoogleSignInResult result = opr.get();
+            handleSignInResult(result);
+        } else if (profile != null) {
+            nextActivity(profile);
+        } else {
+            // If the user has not previously signed in on this device or the sign-in has expired,
+            // this asynchronous branch will attempt to sign in the user silently.  Cross-device
+            // single sign-on will occur in this branch.
+            showProgressDialog();
+            opr.setResultCallback(new ResultCallback<GoogleSignInResult>() {
+                @Override
+                public void onResult(GoogleSignInResult googleSignInResult) {
+                    hideProgressDialog();
+                    handleSignInResult(googleSignInResult);
+                }
+            });
+        }
 
     }
 
-    @Override
-    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-        // An unresolvable error has occurred and Google APIs (including Sign-In) will not
-        // be available.
-        Log.d(TAG, "onConnectionFailed:" + connectionResult);
-    }
 
     private void showProgressDialog() {
         if (mProgressDialog == null) {
@@ -327,18 +272,68 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         }
     }
 
-    private void updateUI(boolean isSignedIn) {
-        if (isSignedIn) {
+    //google plus login changes over here
+
+    private void signIn() {
+        Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
+        startActivityForResult(signInIntent, RC_SIGN_IN);
+    }
+
+
+    private void signOut() {
+        Auth.GoogleSignInApi.signOut(mGoogleApiClient).setResultCallback(
+                new ResultCallback<Status>() {
+                    @Override
+                    public void onResult(Status status) {
+                        updateUI(false, "");
+                    }
+                });
+    }
+
+    private void revokeAccess() {
+        Auth.GoogleSignInApi.revokeAccess(mGoogleApiClient).setResultCallback(
+                new ResultCallback<Status>() {
+                    @Override
+                    public void onResult(Status status) {
+                        updateUI(false, "");
+                    }
+                });
+    }
+
+    private void handleSignInResult(GoogleSignInResult result) {
+        Log.d(TAG, "handleSignInResult:" + result.isSuccess());
+        if (result.isSuccess()) {
+            // Signed in successfully, show authenticated UI.
+            GoogleSignInAccount acct = result.getSignInAccount();
+
+            Log.e(TAG, "display name: " + acct.getDisplayName());
+
+            String personName = acct.getDisplayName();
+            String personPhotoUrl = acct.getPhotoUrl().toString();
+            String email = acct.getEmail();
+
+            Log.e(TAG, "Name: " + personName + ", email: " + email
+                    + ", Image: " + personPhotoUrl);
+
+            updateUI(true, personName);
+        } else {
+            // Signed out, show unauthenticated UI.
+            updateUI(false, "");
         }
     }
 
     @Override
-    public void onConnected(Bundle bundle) {
-
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+        // An unresolvable error has occurred and Google APIs (including Sign-In) will not
+        // be available.
+        Log.d(TAG, "onConnectionFailed:" + connectionResult);
     }
 
-    @Override
-    public void onConnectionSuspended(int i) {
-
+    private void updateUI(boolean isSignedIn, String name) {
+        if (isSignedIn) {
+            launchActivity(name);
+        } else {
+            btnSignIn.setVisibility(View.VISIBLE);
+        }
     }
 }
