@@ -1,35 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.demo.app.myecash.UploadPicturesActivity">
+    android:orientation="vertical"
+    tools:context="com.demo.app.myecash.Activities.UploadPicturesActivity">
 
     <LinearLayout
+        android:id="@+id/photoUploadLL"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
 
         <ImageView
+            android:id="@+id/image"
             android:layout_width="0dp"
-            android:layout_weight="0.2"
+            android:layout_height="90dp"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/ic_getcashe"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_height="wrap_content" />
+            android:layout_weight="0.2"
+            android:src="@drawable/ic_profile" />
 
         <EditText
+            android:id="@+id/uploadBox"
             android:layout_width="0dp"
-            android:layout_weight="0.8"
+            android:layout_height="90dp"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:hint="Add Photo"
-            android:layout_height="wrap_content" />
-
+            android:layout_weight="0.8"
+            android:clickable="true"
+            android:focusable="false"
+            android:hint="Click to add proof" />
 
     </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/saveCancelLL"
+        android:layout_gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:visibility="gone"
+        android:layout_below="@+id/photoUploadLL"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/saveFile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Save" />
+
+        <Button
+            android:id="@+id/cancelFileUpload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Cancel" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

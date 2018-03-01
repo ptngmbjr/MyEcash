@@ -3,7 +3,6 @@ package com.demo.app.myecash.Fragments;
 import android.app.Fragment;
 import android.content.Intent;
 import android.content.res.Resources;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,12 +10,12 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.demo.app.myecash.Adaptors.profileAdaptor;
-import com.demo.app.myecash.BankDetailsActivity;
-import com.demo.app.myecash.EmploymentDetailsActivity;
+import com.demo.app.myecash.Activities.BankDetailsActivity;
+import com.demo.app.myecash.Activities.EmploymentDetailsActivity;
 import com.demo.app.myecash.Enums.profileEnum;
 import com.demo.app.myecash.ListViews.profileListView;
-import com.demo.app.myecash.PersonalDetailsActivity;
-import com.demo.app.myecash.PhotoProofsActivity;
+import com.demo.app.myecash.Activities.PersonalDetailsActivity;
+import com.demo.app.myecash.Activities.PhotoProofsActivity;
 import com.demo.app.myecash.R;
 
 import java.util.ArrayList;

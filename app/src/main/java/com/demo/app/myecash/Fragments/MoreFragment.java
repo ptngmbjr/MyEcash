@@ -48,12 +48,12 @@ public class MoreFragment extends Fragment {
         ArrayList items = new ArrayList();
 
         //Add fake data to our list - notice unsorted order
-        items.add(new moreListView("ic_profile.png", "HELP DESK", "Actions"));
-        items.add(new moreListView("ic_profile.png", "REFER & EARN", "Actions"));
-        items.add(new moreListView("ic_profile.png", "ABOUT", "Info"));
-        items.add(new moreListView("ic_profile.png", "HOW TO REPAY", "Info"));
-        items.add(new moreListView("ic_profile.png", "SEE HOW CASHe WORKS?", "Info"));
-        items.add(new moreListView("ic_profile.png", "LOGOUT", "Info"));
+        items.add(new moreListView("ic_profile.png", "HELP DESK", "Actions", -1));
+        items.add(new moreListView("ic_profile.png", "REFER & EARN", "Actions", -1));
+        items.add(new moreListView("ic_profile.png", "ABOUT", "Info", -1));
+        items.add(new moreListView("ic_profile.png", "HOW TO REPAY", "Info", -1));
+        items.add(new moreListView("ic_profile.png", "SEE HOW CASHe WORKS?", "Info", -1));
+        items.add(new moreListView("ic_profile.png", "LOGOUT", "Info", -1));
 
         ListView list = (ListView) v.findViewById(R.id.list_more);
 
@@ -79,7 +79,7 @@ public class MoreFragment extends Fragment {
 
             //If it is the start of a new section we create a new moreListView and add it to our array
             if (header != obj.getCategory()) {
-                moreListView sectionCell = new moreListView(obj.getImage(), obj.getCategory(), null);
+                moreListView sectionCell = new moreListView(obj.getImage(), obj.getCategory(), null,obj.getID());
                 sectionCell.setToSectionHeader();
                 tempList.add(sectionCell);
                 header = obj.getCategory();

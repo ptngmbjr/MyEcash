@@ -6,6 +6,7 @@ public class moreListView implements Comparable<moreListView> {
     private String image;
     private String name;
     private String category;
+    private int id;
     private boolean isSectionHeader;
 
     @Override
@@ -14,10 +15,12 @@ public class moreListView implements Comparable<moreListView> {
     }
 
 
-    public moreListView(String image,String name, String category) {
-        this.image=image;
+    public moreListView(String image, String name, String category, int id) {
+        this.image = image;
         this.name = name;
         this.category = category;
+        this.id = id;
+
         isSectionHeader = false;
     }
 
@@ -27,6 +30,10 @@ public class moreListView implements Comparable<moreListView> {
 
     public String getName() {
         return name;
+    }
+
+    public int getID() {
+        return id;
     }
 
     public String getCategory() {

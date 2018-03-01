@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".LoginActivity"
+            android:name=".Activities.LoginActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
 
@@ -39,14 +39,14 @@
         <!-- android:name=".MoreFragment" -->
         <!-- android:label="@string/title_activity_more" -->
         <!-- android:theme="@style/AppTheme.NoActionBar"></activity> -->
-        <activity android:name=".PersonalDetailsActivity" />
+        <activity android:name=".Activities.PersonalDetailsActivity" />
         <activity
-            android:name=".PhotoProofsActivity"
+            android:name=".Activities.PhotoProofsActivity"
             android:label="@string/title_activity_photo_proofs"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".UploadPicturesActivity" />
-        <activity android:name=".BankDetailsActivity" />
-        <activity android:name=".EmploymentDetailsActivity" />
+        <activity android:name=".Activities.UploadPicturesActivity" />
+        <activity android:name=".Activities.BankDetailsActivity" />
+        <activity android:name=".Activities.EmploymentDetailsActivity" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
